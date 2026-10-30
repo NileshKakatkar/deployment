@@ -140,7 +140,9 @@ services:
         condition: service_started
 
   email-service:
-    build: ../email-service
+    build:
+      context: ..
+      dockerfile: email-service/Dockerfile
     environment:
       EMAIL_SERVICE_PORT: 8084
       KAFKA_BROKERS: kafka:9092
