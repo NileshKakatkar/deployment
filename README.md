@@ -9,3 +9,5 @@ docker compose up --build
 ```
 
 The gateway is available at `http://localhost:8080`.
+
+User Service exposes gRPC on port 50051 and Product Service exposes gRPC on port 50052. Order Service uses both clients for user and product lookups. Kafka transports order events to Email Service.
